@@ -12,8 +12,6 @@ machine for development and testing purposes.
 
 ### Prequisites
 
-### Prerequisites
-
 #### CMake
 
 Go to the [CMake download page](https://cmake.org/download/) and download CMake.
