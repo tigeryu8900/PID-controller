@@ -46,8 +46,10 @@ can run one of the existing tests.
 ## Examples
 
 ```c++
+// These are some random libraries that I've made up
 #include "randomMotor.h"
 #include "randomSensor.h"
+
 #include "PID-controller.h"
 
 #define SET_POINT 0
