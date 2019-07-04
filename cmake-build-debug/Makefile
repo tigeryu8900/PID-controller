@@ -122,6 +122,46 @@ PID/fast:
 	$(MAKE) -f CMakeFiles\PID.dir\build.make CMakeFiles/PID.dir/build
 .PHONY : PID/fast
 
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+src/LowPassFilter.obj: src/LowPassFilter.cpp.obj
+
+.PHONY : src/LowPassFilter.obj
+
+# target to build an object file
+src/LowPassFilter.cpp.obj:
+	$(MAKE) -f CMakeFiles\PID.dir\build.make CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj
+.PHONY : src/LowPassFilter.cpp.obj
+
+src/LowPassFilter.i: src/LowPassFilter.cpp.i
+
+.PHONY : src/LowPassFilter.i
+
+# target to preprocess a source file
+src/LowPassFilter.cpp.i:
+	$(MAKE) -f CMakeFiles\PID.dir\build.make CMakeFiles/PID.dir/src/LowPassFilter.cpp.i
+.PHONY : src/LowPassFilter.cpp.i
+
+src/LowPassFilter.s: src/LowPassFilter.cpp.s
+
+.PHONY : src/LowPassFilter.s
+
+# target to generate assembly for a file
+src/LowPassFilter.cpp.s:
+	$(MAKE) -f CMakeFiles\PID.dir\build.make CMakeFiles/PID.dir/src/LowPassFilter.cpp.s
+.PHONY : src/LowPassFilter.cpp.s
+
 src/PID.obj: src/PID.cpp.obj
 
 .PHONY : src/PID.obj
@@ -149,6 +189,33 @@ src/PID.cpp.s:
 	$(MAKE) -f CMakeFiles\PID.dir\build.make CMakeFiles/PID.dir/src/PID.cpp.s
 .PHONY : src/PID.cpp.s
 
+tests/main.obj: tests/main.cpp.obj
+
+.PHONY : tests/main.obj
+
+# target to build an object file
+tests/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/tests/main.cpp.obj
+.PHONY : tests/main.cpp.obj
+
+tests/main.i: tests/main.cpp.i
+
+.PHONY : tests/main.i
+
+# target to preprocess a source file
+tests/main.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/tests/main.cpp.i
+.PHONY : tests/main.cpp.i
+
+tests/main.s: tests/main.cpp.s
+
+.PHONY : tests/main.s
+
+# target to generate assembly for a file
+tests/main.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/tests/main.cpp.s
+.PHONY : tests/main.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -157,10 +224,17 @@ help:
 	@echo ... depend
 	@echo ... PID
 	@echo ... edit_cache
+	@echo ... main
 	@echo ... rebuild_cache
+	@echo ... src/LowPassFilter.obj
+	@echo ... src/LowPassFilter.i
+	@echo ... src/LowPassFilter.s
 	@echo ... src/PID.obj
 	@echo ... src/PID.i
 	@echo ... src/PID.s
+	@echo ... tests/main.obj
+	@echo ... tests/main.i
+	@echo ... tests/main.s
 .PHONY : help
 
 

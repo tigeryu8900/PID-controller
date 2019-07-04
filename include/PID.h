@@ -5,14 +5,13 @@
 #ifndef PID_CONTROLLER_PID_H
 #define PID_CONTROLLER_PID_H
 
-#include <ctime>
+#include <chrono>
+#include <thread>
+
 #include "LowPassFilter.h"
 
 namespace PID {
 
-
-using std::time;
-using std::time_t;
 
 struct kpid_t {
   double p;
@@ -21,17 +20,20 @@ struct kpid_t {
 };
 
 class PID {
-
+private:
   double _setPoint;
   kpid_t _kpid;
   double _clampingLimit;
 
-  time_t startTime = time(nullptr);
-  time_t _previousTime = startTime;
-  int _integral = 0;
+  int64_t _startTime;
+  int64_t _previousTime;
+  int64_t _integral = 0;
 
   LowPassFilter _lpf;
 
+  static int64_t nanos();
+
+public:
   PID(double setPoint, kpid_t kpid, double clampingLimit, double cutoffFrequency);
 
   double next(double input);

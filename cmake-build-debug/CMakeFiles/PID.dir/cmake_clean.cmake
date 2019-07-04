@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PID.dir/src/PID.cpp.obj"
+  "CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj"
   "libPID.pdb"
   "libPID.a"
 )

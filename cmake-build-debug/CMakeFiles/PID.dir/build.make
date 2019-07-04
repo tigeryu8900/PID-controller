@@ -70,17 +70,33 @@ CMakeFiles/PID.dir/src/PID.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PID.dir/src/PID.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tiger\CLionProjects\PID-controller\src\PID.cpp -o CMakeFiles\PID.dir\src\PID.cpp.s
 
+CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj: CMakeFiles/PID.dir/flags.make
+CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj: CMakeFiles/PID.dir/includes_CXX.rsp
+CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj: ../src/LowPassFilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tiger\CLionProjects\PID-controller\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PID.dir\src\LowPassFilter.cpp.obj -c C:\Users\tiger\CLionProjects\PID-controller\src\LowPassFilter.cpp
+
+CMakeFiles/PID.dir/src/LowPassFilter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PID.dir/src/LowPassFilter.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tiger\CLionProjects\PID-controller\src\LowPassFilter.cpp > CMakeFiles\PID.dir\src\LowPassFilter.cpp.i
+
+CMakeFiles/PID.dir/src/LowPassFilter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PID.dir/src/LowPassFilter.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tiger\CLionProjects\PID-controller\src\LowPassFilter.cpp -o CMakeFiles\PID.dir\src\LowPassFilter.cpp.s
+
 # Object files for target PID
 PID_OBJECTS = \
-"CMakeFiles/PID.dir/src/PID.cpp.obj"
+"CMakeFiles/PID.dir/src/PID.cpp.obj" \
+"CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj"
 
 # External object files for target PID
 PID_EXTERNAL_OBJECTS =
 
 libPID.a: CMakeFiles/PID.dir/src/PID.cpp.obj
+libPID.a: CMakeFiles/PID.dir/src/LowPassFilter.cpp.obj
 libPID.a: CMakeFiles/PID.dir/build.make
 libPID.a: CMakeFiles/PID.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tiger\CLionProjects\PID-controller\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libPID.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tiger\CLionProjects\PID-controller\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libPID.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\PID.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PID.dir\link.txt --verbose=$(VERBOSE)
 

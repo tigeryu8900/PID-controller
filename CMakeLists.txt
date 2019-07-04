@@ -23,4 +23,15 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 include_directories("${PROJECT_SOURCE_DIR}/include" include src)
 
 add_library(PID
-        src/PID.cpp)
+        src/PID.cpp
+        src/LowPassFilter.cpp)
+
+# Setup testing
+#enable_testing()
+
+# Add test cpp file
+add_executable(main
+        tests/main.cpp
+        )
+target_link_libraries(main PID)
+#add_test(NAME main.exe COMMAND main.exe)
